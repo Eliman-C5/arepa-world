@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Arepa World</title>
+  </head>
+  <body>
+    <div class="container">
+      <main>
+        <nav>
+          <h3>Arepa World</h3>
+          <ul class="list">
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#">Blog</a>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+            <li>
+              <a href="#">Dishes</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="content">
+          <h2 class="title">
+            Enjoy with us the most delicious taste on the world
+          </h2>
+
+          <form>
+            <legend>Send us you info!</legend>
+
+            <p class="special-message">
+              Enter your info and then join to the arepa community to share our
+              love for the best food. Remember, all members can share
+              information to create new forms to cook arepas
+            </p>
+
+            <input
+              type="text"
+              name="first-name"
+              id="first-name"
+              placeholder="First name"
+              title="This field just accepts letters and spaces"
+              pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s?]+$"
+              required
+            />
+            <input
+              type="text"
+              name="lasst-name"
+              id="last-name"
+              placeholder="Last name"
+              title="This field just accepts letters and spaces"
+              pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s?]+$"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email address"
+              title="This field just accepts a valid email"
+              pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$"
+              required
+            />
+            <select name="country" id="country" size="1" required>
+              <option value="invalid">
+                Select the community where you write
+              </option>
+              <option value="none">- None of them -</option>
+              <option value="argentina">Argentina</option>
+              <option value="bolivia">Bolivia</option>
+              <option value="brasil">Brasil</option>
+              <option value="colombia">Colombia</option>
+              <option value="chile">Chile</option>
+              <option value="ecuador">Ecuador</option>
+              <option value="panama">Panamá</option>
+              <option value="peru">Perú</option>
+              <option value="spain">España</option>
+              <option value="eeuu">Estados Unidos</option>
+              <option value="venezuela">Venezuela</option>
+            </select>
+            <input
+              type="text"
+              name="subject"
+              id="subject"
+              placeholder="Subject"
+              title="This subject is required"
+              required
+            />
+            <textarea
+              name="comments"
+              id="comments"
+              cols="22"
+              rows="7"
+              placeholder="Hey! We´re making history because arepas are everywhere. if we´re not in your country don´t worry, we´ll get there. Write to us and join to our community to talk about one of the greatest dishes on the world."
+              title="Your comment can´t be bigger than 200 characters"
+              data-pattern="^.{1, 200}$"
+            ></textarea>
+            <div class="conditions">
+              <input
+                type="checkbox"
+                name="conditions"
+                id="conditions"
+                value="accept"
+                required
+              />
+              <label for="conditions">I agree to Arepa World terms</label>
+            </div>
+            <button type="submit" class="btn-send">Send</button>
+          </form>
+        </div>
+      </main>
+      <div class="testimonial">
+        <div class="client">
+          <div class="client-img">
+            <img src="assets/IMG_20201214_191742_400.jpg" alt="" />
+          </div>
+          <h3>Jon McGregor</h3>
+          <p>
+            I´ve been in many countries and eaten many dishes, but arepas
+            changed my mind cause they make me think about different ways we can
+            cook a simple food and how its taste is always superb!
+          </p>
+        </div>
+        <div class="client">
+          <div class="client-img">
+            <img src="assets/IMG_20201221_212828_019.jpg" alt="" />
+          </div>
+          <h3>Wanda Ferguson</h3>
+          <p>
+            I love food! and I love seeing a great team to prepare these dishes
+            everyday. They do their best for giving us a great service while
+            sharing their love for a delicious food. I hope They share their
+            love with the world.
+          </p>
+        </div>
+        <div class="client">
+          <div class="client-img">
+            <img src="assets/IMG_20200927_122538_503.jpg" alt="" />
+          </div>
+          <h3>Armando Segovia</h3>
+          <p>
+            It´s good to see a company growing like this specially when the
+            company has a mission that shares with everybody. That mission is
+            taking happiness everywhere and their way to do that is cooking
+            arepas.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>

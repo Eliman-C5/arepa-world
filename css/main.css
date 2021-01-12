@@ -1,0 +1,301 @@
+:root {
+  --blue: #1883f5;
+  --white: #fff;
+  --gray: #919599;
+  --gray-alpha: rgba(145, 149, 153, 0.8);
+  --gray-dark: #343a40;
+  --gray-dark-alpha: rgba(52, 58, 64, 0.8);
+  --blue-light: #26a1d1;
+  --light: #f8f9fa;
+  --title-size: 1.7em;
+  --little-size: 0.7em;
+  --secondary-body: linear-gradient(to bottom, var(--blue), #12729b);
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: [linea-1] 1fr [linea-2] 1fr [linea3] 1fr [linea-4];
+  min-height: 100vh;
+}
+
+/****************** Main *****************************/
+
+main {
+  background-image: url("../assets/corn-457153_1920.jpg");
+  background-size: cover;
+  grid-column: linea-1 / linea-4;
+}
+
+main > h2 {
+  margin: 0;
+  display: inline-block;
+}
+
+/* nav */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--gray-dark-alpha);
+  grid-column: linea-1 / linea-4;
+}
+
+nav > * {
+  margin: 0.5em 0;
+  padding: 0;
+}
+
+nav > h3 {
+  flex: 1 1 0;
+  padding-left: 8%;
+  color: var(--white);
+  font-size: var(--title-size);
+  cursor: pointer;
+}
+
+.list {
+  display: inherit;
+  list-style: none;
+  flex: 2 1 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list > li {
+  padding: 0 0.7em;
+}
+
+.list > li > a {
+  text-decoration: none;
+  color: var(--light);
+}
+
+.list > li > a:hover {
+  font-size: 1.2em;
+  font-weight: 700;
+  color: var(--white);
+}
+
+/* Content */
+
+.content {
+  display: flex;
+}
+
+.title {
+  color: var(--light);
+  margin: auto;
+  font-size: 2.3em;
+  width: 40%;
+  text-transform: uppercase;
+}
+
+form {
+  width: 40%;
+  height: 40%;
+  margin: 0.2em auto;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  position: relative;
+  top: 50px;
+}
+
+form > * {
+  display: block;
+  margin: 0.5em 2.2em;
+}
+
+.special-message {
+  color: var(--gray);
+}
+
+form > legend {
+  margin-top: 0.8em;
+  margin-bottom: 0.2em;
+  margin-left: 1.3em;
+  font-size: var(--title-size);
+  font-weight: 700;
+}
+
+form > textarea {
+  outline: none;
+}
+
+label {
+  color: var(--gray);
+  font-size: var(--little-size);
+}
+
+form > button {
+  margin-bottom: 1.1em;
+  padding: 7px;
+  font-weight: 700;
+  color: var(--gray);
+  cursor: pointer;
+  border-radius: 5px;
+  border: 0.5px solid var(--gray);
+  background-color: var(--white);
+  outline: none;
+}
+
+form > button:hover {
+  background-color: var(--gray);
+  color: var(--white);
+}
+
+form > input,
+select,
+textarea {
+  padding: 4px;
+  outline: none;
+}
+
+form > input:hover,
+select:hover,
+textarea:hover {
+  outline: 1px solid var(--gray);
+}
+
+/************************* Testimonial *********************/
+
+.testimonial {
+  grid-column: linea-1 / linea-4;
+  display: flex;
+  background-color: var(--gray);
+}
+
+.client {
+  margin-top: 3.5em;
+}
+
+.client-img {
+  height: 60px;
+  padding: 0 30%;
+}
+
+.client-img img {
+  height: 100%;
+  border-radius: 47%;
+  margin: 0 20%;
+}
+
+.client > h3 {
+  color: var(--light);
+  text-align: center;
+}
+
+.client > p {
+  color: var(--light);
+  padding: 0 0.8em;
+}
+
+/*********************** Responsive Design **********************/
+
+@media screen and (max-width: 576px) {
+  .content {
+    flex-direction: column;
+  }
+  .title {
+    width: 100%;
+    text-align: center;
+    margin-top: 1.2em;
+    margin-bottom: 0;
+  }
+  form {
+    width: 65%;
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  form {
+    height: 30%;
+    width: 70%;
+  }
+  .testimonial {
+    flex-direction: column;
+    padding: 0 0.8em;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  nav > h3 {
+    font-size: 1.2em;
+  }
+  .list > li > a {
+    font-size: 0.8em;
+  }
+  .list > li > a:hover {
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  form {
+    width: 75%;
+    height: 20%;
+  }
+  nav > h3 {
+    font-size: 1em;
+  }
+  .list > li > a {
+    font-size: 0.7em;
+  }
+  .list > li > a:hover {
+    font-size: 0.9em;
+  }
+  .client > p {
+    text-align: center;
+  }
+}
+
+/************** Gratefulness **********************/
+
+.second-body {
+  background: var(--secondary-body);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-arepa {
+  height: 300px;
+  width: fit-content;
+  border: 5px solid var(--gray-dark);
+  border-radius: 50%;
+  box-shadow: 1px 2px 6px 3px var(--gray-dark);
+  display: inherit;
+  flex-direction: column;
+  padding: 2em;
+  animation-name: arepa;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+}
+
+.image-arepa img {
+  height: 50%;
+}
+
+.phrase {
+  color: var(--gray-dark);
+  font-weight: 700;
+  font-size: 1.1em;
+}
+
+@keyframes arepa {
+  0% {
+    opacity: 0;
+    transform: rotate(0) scale(0.3);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(360deg) scale(0.8);
+  }
+}
