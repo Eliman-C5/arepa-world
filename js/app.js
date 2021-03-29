@@ -20,6 +20,6 @@ d.addEventListener("submit", (e) => {
   }, 4000);
 
   setTimeout(() => {
-    tester = window.open("../gratefulness.html", "tester");
+    tester = window.open("https://eliman-c5.github.io/arepa-world/gratefulness", "tester");
   }, 5500);
 });
